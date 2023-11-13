@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style2.css" />
+    <title>Document</title>
+  </head>
+  <body>
+   
+      <div class="konfirmasi">
+        <h2>FHRD Kabupaten Bandung</h2>
+        <p>Formulir Data Anggota</p>
+        <form
+          class="my-form"
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycbxJ6J75qi6k4V1ZoXzQolr4xEPvTw3PsDS7sxPDj96NsYeZ16HfTziAFBXBn71KLrfZ/exec"
+          id="my-form"
+        >
+        <div class="label1">
+          <label for="nama" class="form-label">nama Lengkap:</label>
+          <input type="text" id="nama" name="nama" />
+        </div>
+        <br><br>
+        <div class="label2">
+          <label for="tanggal lahir" class="form-label">Tanggal Lahir:</label>
+          <input type="date" id="tanggal lahir" name="tanggal lahir" />
+        </div>
+        <br><br>
+        <div class="label1">
+            <label for="pendidikan terakhir" class="form-label">Pendidikan Terakhir:</label>
+            <input type="text" id="pendidikan terakhir" name="pendidikan terakhir" />
+        </div>
+        <br><br>
+        <div class="label1">
+            <label for="alamat rumah" class="form-label">Alamat Rumah:</label>
+            <input type="text" id="alamat rumah" name="alamat rumah" />
+        </div>
+        <br><br>
+        <div class="label1">
+            <label for="no hp" class="form-label">No hp:</label>
+            <input type="text" id="no hp" name="no hp" />
+        </div>
+        <br><br>
+        <div class="label1">
+            <label for="email" class="form-label">email:</label>
+            <input type="text" id="email" name="email" />
+        </div>
+        <br><br>
+        <div class="label1">
+            <label for="nama perusahaan" class="form-label">Nama Perusahaan:</label>
+            <input type="text" id="nama perusahaan" name="nama perusahaan" />
+          </div>
+          <br><br>
+          <div class="label1">
+            <label for="alamat perusahaan" class="form-label">Alamat Perusahaan:</label>
+            <input type="text" id="alamat perusahaan" name="alamat perusahaan" />
+          </div>
+          <br><br>
+          <div class="label1">
+              <label for="no tlp perusahaan" class="form-label">No Tlp Perusahaan:</label>
+              <input type="text" id="no tlp perusahaan" name="no tlp perusahaan" />
+          </div>
+          <br><br>
+          <div class="label1">
+              <label for="email perusahaan" class="form-label">email Perusahaan:</label>
+              <input type="text" id="email perusahaan" name="email perusahaan" />
+          </div>
+          <br><br>
+          <div class="label1">
+              <label for="bidang usaha" class="form-label">Bidang Usaha:</label>
+              <input type="text" id="bidang usaha" name="bidang usaha" />
+          </div>
+          <br><br>
+          <div class="label1">
+              <label for="sektor usaha" class="form-label">Sektor Usaha:</label>
+              <input type="text" id="sektor usaha" name="sektor usaha" />
+          </div>
+          <br><br>
+          <div class="select">
+              <select name="bersedia membayar iuran" id="bersedia membayar iuran">
+                <option selected>Bersedia Membayar iuran</option>
+                <option value="ya">Ya</option>
+                <option value="tidak">Tidak</option>
+              </select>
+          </div>
+          <div class="label1">
+                <button type="submit">Kirim</button>
+          </div>
+          <div class="label1">
+                <a href="index.html">Kembali Ke home</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+
+    <script>
+        window.addEventListener("load", function() {
+  const form = document.getElementById('my-form');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Data Berhasil Dikirim!");
+    })
+  });
+});
+    </script>
+ 
+
+  </body>
+</html>

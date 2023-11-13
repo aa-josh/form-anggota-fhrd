@@ -1,0 +1,139 @@
+:root {
+  --primary: rgb(169, 11, 184);
+  --bg: rgb(20, 1, 22);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url(../img/biru.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* hero */
+
+.konfirmasi {
+  text-align: center;
+  color: white;
+}
+
+.konfirmasi h2 {
+  padding-top: 2rem;
+}
+
+.konfirmasi p {
+  padding-bottom: 1rem;
+}
+
+.my-form {
+  height: 100vh;
+}
+
+.my-form .label1,
+.my-form .label2,
+.my-form .select {
+  display: inline-block;
+  width: 80%;
+}
+.my-form label {
+  display: block;
+}
+.my-form .label1 input,
+.my-form .label2 input {
+  text-align: center;
+  vertical-align: middle;
+  margin: 5px 10px 0 0;
+  padding: 6px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 70%;
+  font-size: 1.3rem;
+}
+
+.my-form .select select {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  height: 2.6rem;
+  color: blue;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.my-form button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.my-form button:hover {
+  background-color: royalblue;
+}
+
+.label1 a {
+  font-size: 1.3rem;
+  color: white;
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
+.label1 a:hover {
+  color: aqua;
+}
+
+/* media */
+/* laptop */
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+
+  body {
+    height: 100rem;
+  }
+
+  .my-form input {
+    margin: 10px 0;
+  }
+
+  .my-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .my-form button {
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 65%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+}

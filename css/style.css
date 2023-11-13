@@ -1,0 +1,149 @@
+:root {
+  --primary: rgb(169, 11, 184);
+  --bg: rgb(20, 1, 22);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem 6%;
+  background-image: linear-gradient(
+    rgb(4, 99, 20),
+    rgb(255, 255, 255),
+    rgb(4, 99, 20)
+  );
+  width: 10%;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+}
+.navbar-img img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3rem;
+  width: 80px;
+}
+.navbar-nav {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar-nav a {
+  display: flex;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.2rem;
+}
+.navbar-nav a:hover {
+  color: rgb(103, 222, 243);
+}
+.hero {
+  display: block;
+  margin: auto;
+  width: 90%;
+  height: 100vh;
+  background-color: rgb(162, 255, 255);
+  background-image: url(../img/fhrd\ background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.hero img {
+  display: block;
+  margin: auto;
+  width: 150px;
+  padding-top: 2rem;
+}
+.hero h1,
+.hero h2,
+.hero h3 {
+  text-align: center;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+.hero h3 {
+  margin-top: 17rem;
+}
+.hero a {
+  display: flex;
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.2rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.hero a:hover {
+  color: rgb(103, 222, 243);
+}
+
+/* media */
+/* laptop */
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 60%;
+  }
+
+  .navbar {
+    width: 20%;
+  }
+  .navbar-img img {
+    top: 3rem;
+    width: 50px;
+  }
+
+  .hero {
+    width: 80%;
+    height: 100vh;
+  }
+  .hero img {
+    width: 100px;
+  }
+  .hero h3 {
+    margin-top: 30rem;
+  }
+  .hero a:hover {
+    color: rgb(103, 222, 243);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+}
